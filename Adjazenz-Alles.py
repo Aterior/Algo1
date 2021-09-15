@@ -5,9 +5,15 @@ class Node(dvl.Node):
     def __init__(self):
         self.color = "white"
 
-class LinkedList(dvl.LinkedList):
-    def changeColor(self):
 
+class LinkedList(dvl.LinkedList):
+    def changeColor(self, Node):
+        if Node.color == "white":
+            Node.color = "grey"
+        elif Node.color == "grey":
+            Node.color = "black"
+        elif Node.color == "black":
+            Node.color = "white"
 
 
 class Adjazenzliste:
